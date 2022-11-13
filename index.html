@@ -5,30 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="numero_adivinar_oculto" hidden ></div>
-    <div id="numero_turno_oculto" hidden >0</div>
-    <button id='btnNew'> Nuevo Juego </button>
-    <br><br>
-    <button id='btnFin'> Rendirse </button> 
-    <div id="numero_adivinar">XXXX</div>
+    <div class="container">
+        <br>
+        <div id="numero_adivinar_oculto" hidden ></div>
+        <div id="numero_turno_oculto" hidden >0</div>
+        <div class="d-grid">
+            <button id='btnNew' type="button" class="btn btn-success btn-block">Nuevo Juego</button>
+        </div>
+        
+        <br>
+        <div id="numero_adivinar">XXXX</div>
+        <button id='btnFin' class="btn btn-danger"> Rendirse </button> 
 
-    <br><br>
- 
-    <input type="text" id="number"> 
-    <button id='myBtn'> Enviar Intento</button>
-    <br><br>
-    <table border="2">
-        <tr>
-            <th>Turno</th>
-            <th>Numero</th>
-            <th>Fijas</th>
-            <th>Picas</th>
-        </tr>
-        <tbody id="history">
+        <br><br>
+    
+        <input type="number" id="number"> 
+        <button id='myBtn' class="btn-info"> Enviar Intento</button>
+        <br><br>
+        <table class="table table-bordered">
+            <tr>
+                <th class="center">Turno</th>
+                <th>Numero</th>
+                <th>Picas</th>
+                <th>Fijas</th>
+            </tr>
+            <tbody id="history">
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

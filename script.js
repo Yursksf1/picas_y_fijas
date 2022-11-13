@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById("myBtn").addEventListener("click", myFunction);
+    document.getElementById("number").addEventListener("keypress", myFunctionEnter);
     document.getElementById("btnNew").addEventListener("click", newGame);
     document.getElementById("btnFin").addEventListener("click", Rendirse);
     selectionarNuevoNumero();
@@ -61,6 +62,12 @@ function deleteChild(element) {
 function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
   }
+
+function myFunctionEnter(e){
+    if (e.key === 'Enter') {
+        myFunction()
+    }
+}
 
 function myFunction() {
     current_number = document.getElementById("number").value;
@@ -136,8 +143,8 @@ function agregarHistory(indice, value, fijas, picas) {
     
     node_td1.appendChild(document.createTextNode(indice));           // Create a text node
     node_td2.appendChild(document.createTextNode(value));           // Create a text node
-    node_td3.appendChild(document.createTextNode(fijas));           // Create a text node
-    node_td4.appendChild(document.createTextNode(picas));           // Create a text node
+    node_td3.appendChild(document.createTextNode(picas));           // Create a text node
+    node_td4.appendChild(document.createTextNode(fijas));           // Create a text node
 
     node_tr.appendChild(node_td1);                              // Append the text to <li>
     node_tr.appendChild(node_td2);                              // Append the text to <li>
